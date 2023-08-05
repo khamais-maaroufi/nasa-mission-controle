@@ -1,7 +1,7 @@
 async function httpGetPlanets() {
   // TODO: Once API is ready.
   try {
-    let response = await fetch(process.env.REACT_APP_API_URL + "/planets");
+    let response = await fetch("/planets");
     return response.json();
   } catch (e) {
     console.log(e);
@@ -13,7 +13,7 @@ async function httpGetPlanets() {
 async function httpGetLaunches() {
   // TODO: Once API is ready.
   try {
-    let response = await fetch(process.env.REACT_APP_API_URL + "/launches");
+    let response = await fetch("/launches");
     return response.json();
   } catch (e) {
     console.log(e);
@@ -24,7 +24,7 @@ async function httpGetLaunches() {
 async function httpSubmitLaunch(launch) {
   // TODO: Once API is ready.
   try {
-    return await fetch(process.env.REACT_APP_API_URL + "/launches", {
+    return await fetch("/launches", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -40,7 +40,7 @@ async function httpSubmitLaunch(launch) {
 async function httpAbortLaunch(id) {
   // TODO: Once API is ready.
   try {
-    return await fetch(process.env.REACT_APP_API_URL + "/launches" + `/${id}`, {
+    return await fetch("/launches" + `/${id}`, {
       method: "delete",
     });
   } catch (e) {

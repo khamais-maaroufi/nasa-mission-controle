@@ -21,7 +21,7 @@ async function startServer() {
       useUnifiedTopology: true,
     });
     server.listen(PORT, () => {
-      console.log("server is listening on port: " + PORT);
+      console.log("server is listening on port: " + (PORT || 8000));
     });
   } catch (e) {
     return console.log(e);
