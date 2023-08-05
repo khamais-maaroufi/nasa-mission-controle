@@ -1,0 +1,27 @@
+{
+  "name": "nasa-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "npm run watch --prefix server",
+    "client": "npm start --prefix front",
+    "all": "npm-run-all --parallel server client",
+    "server-i": "npm install --only=production --prefix server ",
+    "client-i": "npm install --only=production --prefix front",
+    "all-i": "npm-run-all  server-i client-i",
+    "client-build": "npm run build --prefix front",
+    "server-production": "npm run start --prefix server",
+    "all-build": "npm-run-all client-build server-production",
+    "all-restart": "npm run start --prefix server",
+    "cluster": "npm run cluster --prefix server",
+    "exit-cluster": "npm run exit --prefix server",
+    "start-cluster": "npm-run-all --parallel client cluster"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  }
+}
